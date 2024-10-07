@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.9.6'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+group 'com.jyotisharma'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'com.jyotisharma.EcommerceAutomation'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.2'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.24.0'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    implementation 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    testImplementation 'io.qameta.allure:allure-junit5:2.14.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+allure {
+    version = '2.14.0'
+    autoconfigure = true
+    aspectjweaver = true
+}
