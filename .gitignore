@@ -1,0 +1,75 @@
+# Ignore Gradle build directory
+build/
+
+# Ignore Gradle wrapper files
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Ignore Gradle dependency cache and project-specific cache
+**/.gradle
+.gradle/
+
+# Ignore compiled Java class files
+*.class
+
+# Ignore logs, temporary files, and caches
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# Ignore IntelliJ IDEA-specific files and folders
+.idea/
+*.iml
+out/
+
+# Ignore Eclipse-specific files
+.project
+.classpath
+.settings/
+
+# Ignore NetBeans-specific files
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Ignore VSCode-specific files
+.vscode/
+
+# Ignore generated JAR, WAR, and class files
+*.jar
+*.war
+*.ear
+*.class
+
+# Ignore test reports (JUnit and Allure)
+test-output/
+allure-results/
+allure-report/
+
+# Ignore Allure-generated folders
+allure-results/
+allure-report/
+allure-history/
+
+# Ignore Selenium-specific downloads (like WebDriver binaries)
+seleniumdrivers/
+chromedriver.exe
+geckodriver.exe
+operadriver.exe
+IEDriverServer.exe
+
+# Ignore temporary files created during execution
+hs_err_pid*
+
+# Ignore Gradle files
+.gradle/
+build/
+
+# Ignore local environment files
+.env
+.env.local

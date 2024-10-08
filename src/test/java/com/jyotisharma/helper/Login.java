@@ -24,12 +24,6 @@ public class Login {
 
         WebElement submitButton = driver.findElement(By.xpath("//button[text()='Login to QKart']"));
         submitButton.click();
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            System.out.println("Exception in perform login " + e.getMessage());
-        }
     }
 
     public String GetLoggedInUser() {
