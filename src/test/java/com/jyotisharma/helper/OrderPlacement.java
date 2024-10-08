@@ -20,7 +20,8 @@ public class OrderPlacement {
     }
 
     public List<WebElement> SearchProducts(String item) {
-        WebElement search = driver.findElement(By.xpath("//input[@name = 'search']"));
+        WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name = 'search']")));
+
         search.clear();
         search.sendKeys(item);
 

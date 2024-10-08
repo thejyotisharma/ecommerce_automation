@@ -2,6 +2,7 @@
 build/
 
 # Ignore Gradle wrapper files
+.gradle
 .gradle/
 !gradle/wrapper/gradle-wrapper.jar
 

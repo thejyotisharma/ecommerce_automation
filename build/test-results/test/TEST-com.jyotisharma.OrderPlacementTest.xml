@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.jyotisharma.OrderPlacementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-08T19:11:35" hostname="DESKTOP-BOT2FEN" time="27.833">
+<testsuite name="com.jyotisharma.OrderPlacementTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-10-08T20:33:39" hostname="DESKTOP-BOT2FEN" time="12.798">
   <properties/>
-  <testcase name="SearchForProductAndCheckout()" classname="com.jyotisharma.OrderPlacementTest" time="27.833"/>
+  <testcase name="SearchForProductAndCheckout()" classname="com.jyotisharma.OrderPlacementTest" time="12.798"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Oct 09, 2024 12:41:28 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[Oct 09, 2024 2:03:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 128; Please update to a Selenium version that supports CDP version 129
 ]]></system-err>
 </testsuite>
