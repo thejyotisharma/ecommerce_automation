@@ -24,7 +24,7 @@ public class RegisterUserTest {
     private static Wait<WebDriver> fluentWait;
 
     @BeforeAll
-    public static void setup() {
+    public static void Setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -43,12 +43,12 @@ public class RegisterUserTest {
     }
 
     @BeforeEach
-    void setUp() throws InterruptedException {
+    void SetUp() throws InterruptedException {
         Thread.sleep(5000);
     }
 
     @Test
-    public void registerNewUser() {
+    public void RegisterNewUser() {
         String userName = "test_user_" + new Random().nextInt(10000);
         String password = "secure_password_1";
 
@@ -60,7 +60,7 @@ public class RegisterUserTest {
     }
 
     @Test
-    public void shouldGetErrorIfExistingUser() {
+    public void ShouldGetErrorIfExistingUser() {
         String userName = "jyotisharma1";
         String password = "secure_password_1";
 
@@ -69,7 +69,7 @@ public class RegisterUserTest {
     }
 
     @Test
-    public void shouldGetErrorIfPasswordDontMatch() {
+    public void ShouldGetErrorIfPasswordDontMatch() {
         String userName = "test_user_" + new Random().nextInt(10000);
         String password = "secure_password_1";
 
@@ -78,7 +78,7 @@ public class RegisterUserTest {
     }
 
     @Test
-    public void shouldGetErrorIfUserNameNotEntered() {
+    public void ShouldGetErrorIfUserNameNotEntered() {
         String userName = "";
         String password = "secure_password_1";
 
@@ -87,7 +87,7 @@ public class RegisterUserTest {
     }
 
     @Test
-    public void shouldGetErrorIfPasswordNotEntered() {
+    public void ShouldGetErrorIfPasswordNotEntered() {
         String userName = "test_user_123";
         String password = "";
 
@@ -96,7 +96,7 @@ public class RegisterUserTest {
     }
 
     @AfterAll
-    public static void tearDown() {
+    public static void TearDown() {
         driver.quit();
     }
 

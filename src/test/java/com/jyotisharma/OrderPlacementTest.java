@@ -27,7 +27,7 @@ public class OrderPlacementTest {
     private static Notification notification;
 
     @BeforeAll
-    public static void setup() {
+    public static void Setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -63,7 +63,7 @@ public class OrderPlacementTest {
     }
 
     @AfterAll
-    public static void tearDown() {
+    public static void TearDown() {
         driver.quit();
     }
 

@@ -17,7 +17,7 @@ class HomePageTest {
     private static HomePage home;
 
     @BeforeAll
-    public static void setup() {
+    public static void Setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -28,25 +28,25 @@ class HomePageTest {
     }
 
     @Test
-    public void checkHeaderContent() {
+    public void CheckHeaderContent() {
         Assertions.assertEquals(true, home.IsSearchvisible());
         Assertions.assertEquals(true, home.IsLoginvisible());
         Assertions.assertEquals(true, home.IsRegistervisible());
     }
 
     @Test
-    public void checkBodyContent() {
+    public void CheckBodyContent() {
         Assertions.assertEquals(true, home.GetItemsOnHomeScreen().size() > 0);
     }
 
     @Test
-    public void checkFooter() {
+    public void CheckFooter() {
         Assertions.assertEquals("Privacy policy", home.GetPrivacyPolicyText());
         Assertions.assertEquals("Terms of Service", home.GetTermsOfServiceText());
     }
 
     @AfterAll
-    public static void tearDown() {
+    public static void TearDown() {
         driver.quit();
     }
 

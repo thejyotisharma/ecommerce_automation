@@ -23,7 +23,7 @@ class LoginTest {
     private static Wait<WebDriver> fluentWait;
 
     @BeforeAll
-    public static void setup() {
+    public static void Setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -38,14 +38,14 @@ class LoginTest {
     }
 
     @Test
-    public void performLoginWithInvalidPassword() {
+    public void PerformLoginWithInvalidPassword() {
         login.PerformLogin("jyotisharma1", "INVALID_PASSWORD");
         Assertions.assertEquals("Password is incorrect", notification.GetNotificationMessage());
         Assertions.assertEquals("https://crio-qkart-frontend-qa.vercel.app/login", driver.getCurrentUrl());
     }
 
     @Test
-    public void performLogin() {
+    public void PerformLogin() {
         login.PerformLogin("jyotisharma1", "7JeE3T@7m5MQhh");
         try {
             Thread.sleep(5000);
@@ -58,7 +58,7 @@ class LoginTest {
     }
 
     @AfterAll
-    public static void tearDown() {
+    public static void TearDown() {
         driver.quit();
     }
 
