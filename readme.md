@@ -9,6 +9,8 @@ This repository contains the automated test suite for the QKart frontend applica
 
 **[🧪 Allure test report](https://thejyotisharma.github.io/ecommerce_automation)**
 
+**[🎥 Demo video link](https://drive.google.com/file/d/1eH5h_Zvh-VL9kIC177Ak63BaVqmPQCaF/view?usp=sharing)**
+
 ## Table of Contents
 - [Project Structure](#project-structure)
 - [Pre-requisites](#pre-requisites)
