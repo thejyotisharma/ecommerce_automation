@@ -25,10 +25,12 @@ public class OrderPlacement {
         search.clear();
         search.sendKeys(item);
 
-        List<WebElement> results = wait.until(driver -> {
-            List<WebElement> list = driver.findElements(By.className("MuiPaper-root"));
-            return (list.size() > 0 && GetProductName(list.get(0)).toLowerCase().contains(item.toLowerCase())) ? list : null;
-        });
+        List<WebElement> results = wait.until(
+                (driver) -> {
+                    List<WebElement> list = driver.findElements(By.className("MuiPaper-root"));
+                    return (list.size() > 0 && GetProductName(list.get(0)).toLowerCase().contains(item.toLowerCase())) ? list : null;
+                }
+        );
 
         return results;
     }
@@ -53,10 +55,7 @@ public class OrderPlacement {
     }
 
     public void CheckOut() {
-        WebElement checkoutButton = wait.until(driver -> {
-            WebElement item = driver.findElement(By.xpath("//button[contains(@class, 'checkout-btn')]"));
-            return item.isDisplayed() && item.isEnabled() ? item : null;
-        });
+        WebElement checkoutButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'checkout-btn')]")));
         checkoutButton.click();
 
         WebElement address = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".MuiRadio-root")));

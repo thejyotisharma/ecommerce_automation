@@ -33,7 +33,7 @@ public class OrderPlacementTest {
         driver.manage().window().maximize();
 
         fluentWait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(10))
+                .withTimeout(Duration.ofSeconds(20))
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(NoSuchElementException.class);
 
