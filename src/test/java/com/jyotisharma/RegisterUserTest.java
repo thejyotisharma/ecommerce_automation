@@ -38,7 +38,7 @@ public class RegisterUserTest {
         notification = new Notification(driver, fluentWait);
 
         userRegistration = new UserRegistration(driver);
-        login = new Login(driver);
+        login = new Login(driver, fluentWait);
         notification = new Notification(driver, fluentWait);
     }
 

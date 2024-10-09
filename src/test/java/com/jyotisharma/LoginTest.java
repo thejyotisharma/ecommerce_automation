@@ -33,7 +33,7 @@ class LoginTest {
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(NoSuchElementException.class);
 
-        login = new Login(driver);
+        login = new Login(driver, fluentWait);
         notification = new Notification(driver, fluentWait);
     }
 
@@ -47,14 +47,10 @@ class LoginTest {
     @Test
     public void PerformLogin() {
         login.PerformLogin("jyotisharma1", "7JeE3T@7m5MQhh");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            System.out.println("Error in login " + e.getMessage());
-        }
         Assertions.assertEquals("Logged in successfully", notification.GetNotificationMessage());
         Assertions.assertEquals("https://crio-qkart-frontend-qa.vercel.app/", driver.getCurrentUrl());
         Assertions.assertEquals("jyotisharma1", login.GetLoggedInUser());
+        login.Logout();
     }
 
     @AfterAll

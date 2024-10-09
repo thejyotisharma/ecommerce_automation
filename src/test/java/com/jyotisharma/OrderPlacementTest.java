@@ -37,7 +37,7 @@ public class OrderPlacementTest {
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(NoSuchElementException.class);
 
-        login = new Login(driver);
+        login = new Login(driver, fluentWait);
         login.PerformLogin("jyotisharma1", "7JeE3T@7m5MQhh");
         orderPlacement = new OrderPlacement(driver, fluentWait);
         notification = new Notification(driver, fluentWait);
