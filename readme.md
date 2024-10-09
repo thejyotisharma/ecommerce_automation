@@ -7,6 +7,8 @@ This repository contains the automated test suite for the QKart frontend applica
 - Username: `jyotisharma1`
 - Password: `7JeE3T@7m5MQhh`
 
+**[🧪 Allure test report](allure-report.html)**
+
 ## Table of Contents
 - [Project Structure](#project-structure)
 - [Pre-requisites](#pre-requisites)
@@ -57,7 +59,7 @@ To run all the tests in the suite, use the following command:
 ## Test Report Generation
 
 ### Allure Report Generation
-After running the tests, the reports can be generated and viewed using **Allure** or can view the generated HTML report [from here](build/reports/allure-report/allureReport/index.html).
+After running the tests, the reports can be generated and viewed using **Allure** or can view the generated HTML report [from here](allure-report.html).
 
 #### Steps to Generate and View Allure Reports:
 
