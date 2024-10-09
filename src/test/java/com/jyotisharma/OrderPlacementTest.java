@@ -1,13 +1,11 @@
 package com.jyotisharma;
 
+import com.jyotisharma.helper.HomePage;
 import com.jyotisharma.helper.Login;
 import com.jyotisharma.helper.Notification;
 import com.jyotisharma.helper.OrderPlacement;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,6 +23,7 @@ public class OrderPlacementTest {
     private static Login login;
     private static OrderPlacement orderPlacement;
     private static Notification notification;
+    private static HomePage home;
 
     @BeforeAll
     public static void Setup() {
@@ -41,6 +40,7 @@ public class OrderPlacementTest {
         login.PerformLogin("jyotisharma1", "7JeE3T@7m5MQhh");
         orderPlacement = new OrderPlacement(driver, fluentWait);
         notification = new Notification(driver, fluentWait);
+        home = new HomePage(driver);
     }
 
     @Test
@@ -55,6 +55,22 @@ public class OrderPlacementTest {
         orderPlacement.AddToCart(items.get(0));
         String name = orderPlacement.GetCartItem();
         Assertions.assertEquals(name, orderPlacement.GetProductName(items.get(0)));
+
+        orderPlacement.CheckOut();
+        Assertions.assertEquals("Order placed successfully!", notification.GetNotificationMessage());
+        Assertions.assertEquals("Yay! It's ordered \uD83D\uDE03", orderPlacement.GetConfirmOrderText());
+        Assertions.assertEquals("https://crio-qkart-frontend-qa.vercel.app/thanks", driver.getCurrentUrl());
+    }
+
+
+    @Test
+    public void EditItemsInCart() {
+        home.NavigateToHome();
+        List<WebElement> items = orderPlacement.SearchProducts("Shoe");
+
+        orderPlacement.AddToCart(items.get(0));
+        orderPlacement.ChangeProductQuantity(3);
+        Assertions.assertEquals(3, orderPlacement.GetProductQuantity());
 
         orderPlacement.CheckOut();
         Assertions.assertEquals("Order placed successfully!", notification.GetNotificationMessage());

@@ -14,9 +14,11 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public void NavigateToHome(){
-        String url = "https://crio-qkart-frontend-qa.vercel.app/";
-        driver.get(url);
+    public void NavigateToHome() {
+        String url = "https://crio-qkart-frontend-qa.vercel.app";
+        if (!driver.getCurrentUrl().equalsIgnoreCase(url)) {
+            driver.get(url);
+        }
     }
 
     public Boolean IsSearchvisible() {

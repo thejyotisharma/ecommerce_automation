@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.jyotisharma.LoginTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-10-09T01:43:19" hostname="DESKTOP-BOT2FEN" time="8.481">
+<testsuite name="com.jyotisharma.LoginTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-10-09T02:31:56" hostname="DESKTOP-BOT2FEN" time="9.745">
   <properties/>
-  <testcase name="PerformLogin()" classname="com.jyotisharma.LoginTest" time="5.961"/>
-  <testcase name="PerformLoginWithInvalidPassword()" classname="com.jyotisharma.LoginTest" time="2.509"/>
+  <testcase name="PerformLogin()" classname="com.jyotisharma.LoginTest" time="4.208"/>
+  <testcase name="PerformLoginWithInvalidPassword()" classname="com.jyotisharma.LoginTest" time="5.526"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Oct 09, 2024 7:13:19 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[Oct 09, 2024 8:01:56 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 129, returning the closest version; found: 128; Please update to a Selenium version that supports CDP version 129
 ]]></system-err>
 </testsuite>

@@ -49,6 +49,19 @@ public class OrderPlacement {
         addtoCart.click();
     }
 
+    public void ChangeProductQuantity(int updatedQuantity) {
+        for (int i = 1; i < updatedQuantity; i++) {
+            WebElement plusButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".css-u4p24i > button:nth-child(3)")));
+            plusButton.click();
+            wait.until(ExpectedConditions.textToBe(By.cssSelector(".css-olyig7"), (i + 1) + ""));
+        }
+    }
+
+    public int GetProductQuantity() {
+        WebElement quantity = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".css-olyig7")));
+        return Integer.parseInt(quantity.getText());
+    }
+
     public String GetCartItem() {
         WebElement cartItem = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".css-1gjj37g > div:nth-child(1)")));
         return cartItem.getText();
