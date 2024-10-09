@@ -7,7 +7,7 @@ This repository contains the automated test suite for the QKart frontend applica
 - Username: `jyotisharma1`
 - Password: `7JeE3T@7m5MQhh`
 
-**[🧪 Allure test report](index.html)**
+**[🧪 Allure test report](https://thejyotisharma.github.io/ecommerce_automation)**
 
 ## Table of Contents
 - [Project Structure](#project-structure)
