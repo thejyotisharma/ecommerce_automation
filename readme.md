@@ -117,12 +117,11 @@ The **HomepageUIElementTest** verifies the presence and functionality of critica
 1. Open the QKart homepage.
 2. Verify the visibility of essential elements such as:
     - Search bar
+    - Login Button
+    - Register Button
     - Product listings
-    - Category filters
-    - Navigation bar (Home, Orders, Account)
-3. Validate that the product search functionality works by entering a product name in the search bar and checking if relevant products are displayed.
-4. Ensure that filters function correctly by applying category filters and checking the results.
-5. Verify the responsiveness of the homepage by resizing the window and ensuring elements adjust accordingly.
+    - Terms of Use
+    - Privacy Policy
 
 **Expected Outcome**: All essential elements should be present, functional, and displayed correctly on the homepage.
 
@@ -133,14 +132,12 @@ The **RegistrationFormTest** checks the functionality of the user registration f
 1. Navigate to the **Register** page from the homepage.
 2. Fill in the registration form fields with valid data:
     - Username
-    - Email
     - Password
     - Confirm Password
 3. Submit the form and verify:
     - The user receives a success message after registration.
     - The user is redirected to the login page or automatically logged in after registration.
 4. Test form validation by:
-    - Entering an invalid email format and checking for an error message.
     - Submitting mismatched passwords and verifying the corresponding validation error.
     - Leaving any required field empty and verifying the error.
 
