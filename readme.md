@@ -25,14 +25,15 @@ This repository contains the automated test suite for the QKart frontend applica
 ```
 ├── src
 │   └── test
-│       └── com
-│           └── jyotisharma
-│               ├── HomePageTest.java
-│               ├── LoginTest.java
-│               ├── OrderPlacementTest.java
-│               ├── RegisterUserTest.java
-│               └── helper
-│                   └── helper classes for tests
+|       └── java
+│           └── com
+│               └── jyotisharma
+│                   ├── HomePageTest.java
+│                   ├── LoginTest.java
+│                   ├── OrderPlacementTest.java
+│                   ├── RegisterUserTest.java
+│                   └── helper
+│                       └── helper classes for tests
 ├── build.gradle
 └── README.md
 ```
